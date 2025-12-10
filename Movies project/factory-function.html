@@ -1,0 +1,15 @@
+<script>
+    function vehicleFactory(speed){
+        const vehicle = {};
+        vehicle.distance = 0;
+        vehicle.speed = speed;
+        vehicle.travel = function(){
+            vehicle.distance += vehicle.speed;
+        } 
+        return vehicle;
+    }
+    const raceCar = vehicleFactory(200);
+    console.log("Initial race car", raceCar);
+    raceCar.travel();
+    console.log("Final race car", raceCar)
+</script>
